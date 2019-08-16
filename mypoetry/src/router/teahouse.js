@@ -16,6 +16,10 @@ export default  [
                 path:'drɪŋk',
                 component:()=>import('../pages/teahouse/drɪŋk'),
             },
+            {
+                path:'detail/:id',
+                component:()=>import('../pages/teahouse/cup/children/TeaDetail.vue')
+            }
         ]
     }
 ]
