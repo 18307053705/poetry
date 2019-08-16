@@ -24,6 +24,6 @@ export default {
     beforeRouteLeave (to, from, next) {
         sessionStorage.setItem('teahouse', '/teahouse');
         next()
-  }
+    }
 }
 </script>

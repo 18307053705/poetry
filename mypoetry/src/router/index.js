@@ -4,6 +4,8 @@ import Poetry from './poetry';
 import Teahouse from './teahouse';
 import Poem from './poem';
 import Mine from './mine';
+import Search from './search';
+import Classfiy from './classfiy';
 
 
 
@@ -15,7 +17,9 @@ const routes = [
   ...Poetry,
   ...Teahouse,
   ...Poem,
-  ...Mine
+  ...Mine,
+  ...Search,
+  ...Classfiy
   
 ]
 export default new Router({

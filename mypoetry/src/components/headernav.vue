@@ -12,8 +12,8 @@
             </li>
         </ul>
         <div>
-            <i>搜索</i>
-            <i>刷选</i>
+            <i class="itme"  @click="searchPathAction('serach')" ></i>
+            <em class="itme"  @click="searchPathAction('classify')"></em>
         </div>
     </div>
     
@@ -34,6 +34,9 @@ export default {
             sessionStorage.setItem(this.pathSess, path);
             this.footerPath = path;
         },
+        searchPathAction(path){
+            this.$router.push(path);
+        }
     },
     created(){
         if(sessionStorage.getItem(this.pathSess)){
@@ -54,8 +57,9 @@ export default {
     left: 0;
     width: 100%;
     display: flex;
-    height: 44px;
-    background: #eee;
+    height:44px;
+    background: #FFFDF9;
+    color: #999;
     ul{
         flex: 1;
         display: flex;
@@ -67,9 +71,11 @@ export default {
             border-bottom: 2px solid transparent;
         }
         li.Action{
-        color: #ccc;
-        background: #eee;
-        border-color: #ccc;
+        color: #333333;
+        font-size: 16px;
+        background: url('/images/component/navigation bar_line.png') no-repeat;
+        background-size: 60px 4px;
+        background-position: center bottom;
     }
         
     }
@@ -78,10 +84,25 @@ export default {
         line-height:  42px;
         height: 42px;
         text-align: right;
-        i{
+        position: relative;
+        .itme{
             display: inline-block;
-            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            background-size: 100%;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right: 10px;
         }
+        i{
+            background: url('/images/component/navigation bar_search_icon.png');
+            margin-right: 35px;
+        }
+        em{           
+            background: url('/images/component/navigation bar_category_icon.png');
+        }
+        
     }
 }
 

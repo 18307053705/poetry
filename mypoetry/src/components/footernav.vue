@@ -50,7 +50,7 @@ export default {
     position: fixed;
     bottom: 0;
     left: 0;
-    background: #eee;
+    background:#FFFDF9;
     height: 49px;
     display: flex;
     text-align: center;
