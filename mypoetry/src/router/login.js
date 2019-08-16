@@ -1,0 +1,21 @@
+//登录页面
+export default  [
+    {
+        path:'',
+        component:()=>import('../pages/login'),
+        children:[
+            {
+                path:'',
+                component:()=>import('../pages/login/guide'),
+            },
+            {
+                path:'login',
+                component:()=>import('../pages/login/login'),
+            },
+            {
+                path:'enroll',
+                component:()=>import('../pages/login/enroll'),
+            },
+        ]
+    }
+]
