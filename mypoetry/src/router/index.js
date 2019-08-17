@@ -6,7 +6,6 @@ import Poem from './poem';
 import Mine from './mine';
 import Search from './search';
 import Classfiy from './classfiy';
-import Login from './login';
 
 
 
@@ -20,8 +19,7 @@ const routes = [
   ...Poem,
   ...Mine,
   ...Search,
-  ...Classfiy,
-  ...Login
+  ...Classfiy
   
 ]
 export default new Router({
