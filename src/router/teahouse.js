@@ -1,0 +1,25 @@
+//茶社页面
+export default  [
+    {
+        path:'/teahouse',
+        component:()=>import('../pages/teahouse'),
+        children:[
+            {
+                path:'',
+                component:()=>import('../pages/teahouse/cup'),
+            },
+            {
+                path:'tea',
+                component:()=>import('../pages/teahouse/tea'),
+            },
+            {
+                path:'drɪŋk',
+                component:()=>import('../pages/teahouse/drɪŋk'),
+            },
+            {
+                path:'detail/:id',
+                component:()=>import('../pages/teahouse/cup/children/TeaDetail.vue')
+            }
+        ]
+    }
+]
